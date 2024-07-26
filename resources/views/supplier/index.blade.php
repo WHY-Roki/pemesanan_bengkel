@@ -25,8 +25,8 @@
                 <td>{{ $supplier->alamat }}</td>
                 <td>{{ $supplier->no_hp }}</td>
                 <td>
-                    <a href="{{ route('supplier.edit', $supplier->id) }}" class="btn btn-sm btn-warning">Edit</a>
                     <form action="{{ route('supplier.delete', $supplier->id) }}" method="post">
+                        <a href="{{ route('supplier.edit', $supplier->id) }}" class="btn btn-sm btn-warning">Edit</a>
                         @csrf
                         <button class="btn btn-sm btn-danger">Delete</button>
                     </form>
