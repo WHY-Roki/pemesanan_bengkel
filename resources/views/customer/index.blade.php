@@ -24,9 +24,9 @@
                 <td>{{ $customer->nama_customer }}</td>
                 <td>{{ $customer->alamat }}</td>
                 <td>{{ $customer->jenis_kelamin }}</td>
-                <td>
-                    <a href="{{ route('customer.edit', $customer->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                <td>              
                     <form action="{{ route('customer.delete', $customer->id) }}" method="post">
+                        <a href="{{ route('customer.edit', $customer->id) }}" class="btn btn-sm btn-warning">Edit</a>
                         @csrf
                         <button class="btn btn-sm btn-danger">Delete</button>
                     </form>
