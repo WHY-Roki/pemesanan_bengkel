@@ -28,9 +28,9 @@
                 <td>{{ $pegawai->jenis_kelamin }}</td>
                 <td>{{ $pegawai->jabatan }}</td>
                 <td>{{ $pegawai->status }}</td>
-                <td>
-                    <a href="{{ route('pegawai.edit', $pegawai->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                <td>                    
                     <form action="{{ route('pegawai.delete', $pegawai->id) }}" method="post">
+                        <a href="{{ route('pegawai.edit', $pegawai->id) }}" class="btn btn-sm btn-warning">Edit</a>
                         @csrf
                         <button class="btn btn-sm btn-danger">Delete</button>
                     </form>
