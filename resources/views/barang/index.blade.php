@@ -28,8 +28,8 @@
                 <td>{{ $barang->stock }}</td>
                 <td>{{ $barang->satuan }}</td>
                 <td>
-                    <a href="{{ route('barang.edit', $barang->id) }}" class="btn btn-sm btn-warning">Edit</a>
                     <form action="{{ route('barang.delete', $barang->id) }}" method="post">
+                        <a href="{{ route('barang.edit', $barang->id) }}" class="btn btn-sm btn-warning">Edit</a>
                         @csrf
                         <button class="btn btn-sm btn-danger">Delete</button>
                     </form>
