@@ -23,9 +23,9 @@
                 <td>{{ $keluhan->nama_keluhan }}</td>
                 <td>{{ $keluhan->ongkos }}</td>
 
-                <td>
-                    <a href="{{ route('keluhan.edit', $keluhan->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                <td>                    
                     <form action="{{ route('keluhan.delete', $keluhan->id) }}" method="post">
+                        <a href="{{ route('keluhan.edit', $keluhan->id) }}" class="btn btn-sm btn-warning">Edit</a>
                         @csrf
                         <button class="btn btn-sm btn-danger">Delete</button>
                     </form>
