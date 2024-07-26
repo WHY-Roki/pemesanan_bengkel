@@ -25,9 +25,9 @@
                 <td>{{ $kendaraan->no_mesin }}</td>
                 <td>{{ $kendaraan->merek }}</td>
                 <td>{{ $kendaraan->warna }}</td>
-                <td>
-                    <a href="{{ route('kendaraan.edit', $kendaraan->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                <td>                    
                     <form action="{{ route('kendaraan.delete', $kendaraan->id) }}" method="post">
+                        <a href="{{ route('kendaraan.edit', $kendaraan->id) }}" class="btn btn-sm btn-warning">Edit</a>
                         @csrf
                         <button class="btn btn-sm btn-danger">Delete</button>
                     </form>
